@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: servicetype
+spec:
+  selector:
+    app: servicetype
+  type: NodePort
+  ports:
+    - name: http
+      port: 8086
+      nodePort: 30006
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: servicetype
+spec:
+  selector:
+    matchLabels:
+      app: servicetype
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: servicetype
+    spec:
+      containers:
+        - name: server
+          image: r4bc1/servicetype:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8086
+
+---

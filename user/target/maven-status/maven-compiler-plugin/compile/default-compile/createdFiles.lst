@@ -1,0 +1,6 @@
+com\salon\user\UserApplication.class
+com\salon\user\repo\model\User.class
+com\salon\user\api\dto\User.class
+com\salon\user\api\UserController.class
+com\salon\user\service\UserService.class
+com\salon\user\repo\UserRepository.class

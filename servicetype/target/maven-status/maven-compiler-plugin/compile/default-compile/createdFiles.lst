@@ -1,0 +1,6 @@
+com\salon\servicetype\api\dto\ServiceType.class
+com\salon\servicetype\ServicetypeApplication.class
+com\salon\servicetype\repo\ServiceTypeRepository.class
+com\salon\servicetype\api\ServiceTypeController.class
+com\salon\servicetype\service\ServiceTypeService.class
+com\salon\servicetype\repo\model\ServiceType.class
